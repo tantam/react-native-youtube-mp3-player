@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>P2A6R4XH92.org.reactjs.native.example.Mp3Player</string>
+	<string>P2A6R4XH92.com.nguyentantam.Mp3Player</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>P2A6R4XH92.org.reactjs.native.example.Mp3Player</string>
+		<string>P2A6R4XH92.com.nguyentantam.Mp3Player</string>
 	</array>
 </dict>
 </plist>
