@@ -30,10 +30,9 @@ class Player extends Component {
             sliding: false,
             currentTime: 0,
             songIndex: props.songIndex,
-            songs: props.searchedSongs || this.props.songs
+            // songs: props.searchedSongs || this.props.songs
+            songs:  this.props.songs
         };
-        console.log(this)
-
     }
 
     setPlayingSong() {
@@ -183,12 +182,12 @@ class Player extends Component {
                 <View style={ Styles.headerClose }>
                     <FontAwesome onPress={ Actions.pop } name="chevron-left" size={15} color="#fff" />
                 </View>
-                <DownloadButton
-                    download={this.props.searchedSongs}
-                    downloading={this.state.songs[this.state.songIndex].downloading}
-                    downloadMusic={() => this.props.onMusicDownload(this.state.songs[this.state.songIndex])}
-                />
-                {this.renderProgressBar()}
+                {/*<DownloadButton*/}
+                    {/*download={this.props.searchedSongs}*/}
+                    {/*downloading={this.state.songs[this.state.songIndex].downloading}*/}
+                    {/*downloadMusic={() => this.props.onMusicDownload(this.state.songs[this.state.songIndex])}*/}
+                {/*/>*/}
+                {/*{this.renderProgressBar()}*/}
                 <Image
                     style={ Styles.songImage }
                     source={{uri: (Platform.OS == 'android'?"file://": "") + this.state.songs[this.state.songIndex].thumb}}/>
@@ -238,7 +237,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-    console.log(store);
     return {
         // songs: store.songs,
         // searchResults: store.searchResults,

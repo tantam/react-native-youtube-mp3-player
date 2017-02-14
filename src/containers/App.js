@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 import reducer from '../reducers';
 
 import Settings from './Settings';
-import SearchYoutube from './SearchYoutube';
+import Songs from './Songs';
 import Player from './Player';
 
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -21,10 +21,8 @@ export default class App extends Component {
             <Provider store={store}>
                 <Router>
                     <Scene key="root">
-                        <Scene key="searchYoutube" component={SearchYoutube} initial title="SearchYoutube" hideNavBar />
+                        <Scene key="songs" component={Songs} initial title="Songs" hideNavBar />
                         <Scene key="player" component={Player} title="Player" hideNavBar />
-
-
                         <Scene key="settings" component={Settings} title="Settings" />
                     </Scene>
                 </Router>
